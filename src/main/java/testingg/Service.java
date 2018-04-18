@@ -5,20 +5,26 @@ import java.util.HashMap;
 public class Service {
 
 	private HashMap<Integer, Account> accounts = new HashMap<Integer, Account>();
-	private static int accCounter=0;
+	private static int accCounter;
+	
+	public Service()
+	{
+		accCounter=0;
+	}
 	
 	public Account retrieveById(int Id)
 	{
-		if(accounts.containsKey(Id))
-		{
 		return accounts.get(Id);
-		}
-		else return null;
 	}
 	
 	public void addAccount(Account newAccount)
 	{
 		accounts.put(accCounter, newAccount);
 		accCounter++;
+	}
+	
+	public HashMap<Integer, Account> getMap()
+	{
+		return accounts;
 	}
 }
