@@ -9,7 +9,11 @@ public class Service {
 	
 	public Account retrieveById(int Id)
 	{
+		if(accounts.containsKey(Id))
+		{
 		return accounts.get(Id);
+		}
+		else return null;
 	}
 	
 	public void addAccount(Account newAccount)
