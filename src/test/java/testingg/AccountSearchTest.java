@@ -11,6 +11,7 @@ public class AccountSearchTest {
 
 	@Test
 	public void test() {
+		service = new Service();
 		account1 = new Account("John", "Gordon","001");
 		account2 = new Account("James", "Gordon","002");
 		account3 = new Account("John", "Cena","003");
