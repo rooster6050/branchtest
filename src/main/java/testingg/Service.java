@@ -28,15 +28,7 @@ public class Service {
 		return accounts;
 	}
 
-	public int getQuantityByName(String name) {
-		int counter=0;
-		for(Account iter: accounts.values())
-		{
-			if(iter.getFirstName()==name)
-			{
-				counter++;
-			}
-		}
-		return counter;
+	public int getQuantityByName(String name) {		
+		return (int) accounts.values().stream().filter(x -> name.equals(x.getFirstName())).count();
 	}
 }
