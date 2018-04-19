@@ -27,4 +27,8 @@ public class Service {
 	{
 		return accounts;
 	}
+
+	public int getQuantityByName(String name) {		
+		return (int) accounts.values().stream().filter(x -> name.equals(x.getFirstName())).count();
+	}
 }
